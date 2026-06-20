@@ -32,15 +32,12 @@ appElement.innerHTML = `
 		<p id="status" class="status" role="status" aria-live="polite"></p>
 
 		<footer class="footer">
-			<a
+			<div
 				class="signature"
-				href="https://sephy.io"
-				target="_blank"
-				rel="noopener noreferrer"
-				aria-label="Sephyi website"
+				aria-label="Crafted by Sephyi"
 			>
-				<span>Sephyi</span>
-			</a>
+				<span>♥️ Sephyi</span>
+			</div>
 
 			<div class="footer-links">
 				<a

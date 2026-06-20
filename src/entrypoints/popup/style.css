@@ -145,12 +145,6 @@ button:disabled {
 
 .footer-links {
 	display: flex;
-	gap: 10px;
-	align-items: center;
-}
-
-.footer-links {
-	display: flex;
 	gap: 12px;
 	align-items: center;
 }
@@ -178,13 +172,79 @@ button:disabled {
 }
 
 .footer-links a:hover svg {
-
-	filter:
-		drop-shadow(0 0 4px rgba(56, 189, 248, 0.6))
-		drop-shadow(0 0 10px rgba(168, 85, 247, 0.3));
-
+	filter: drop-shadow(0 0 4px rgba(56, 189, 248, 0.6)) drop-shadow(0 0 10px rgba(168, 85, 247, 0.3));
 }
 
+/*
+font-weight: 900;
+letter-spacing: -0.01em;
+
+text-shadow:
+	0 0 1px rgba(255, 0, 204, 0.65),
+	0 0 3px rgba(56, 189, 248, 0.45),
+	0 0 6px rgba(34, 197, 94, 0.25);
+
+background-size: 180% 100%;
+*/
+
+.signature {
+	display: inline-flex;
+	align-items: center;
+	font-size: 11.5px;
+	font-weight: 500;
+	line-height: 1;
+	color: transparent;
+	letter-spacing: -0.01em;
+	text-decoration: none;
+
+	text-shadow:
+		0 0 1px rgba(255, 0, 204, 0.55),
+		0 0 3px rgba(56, 189, 248, 0.35);
+
+	background: linear-gradient(
+		90deg,
+		#ff00cc 0%,
+		#38bdf8 20%,
+		#22c55e 40%,
+		#facc15 60%,
+		#ff00cc 80%,
+		#38bdf8 100%
+	);
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-size: 300% 100%;
+
+	animation:
+		signature-gradient-flow 8s linear infinite,
+		signature-glow-pulse 3s ease-in-out infinite;
+}
+
+@keyframes signature-gradient-flow {
+	from {
+		background-position: 0% 50%;
+	}
+
+	to {
+		background-position: 150% 50%;
+	}
+}
+
+@keyframes signature-glow-pulse {
+	0%,
+	100% {
+		text-shadow:
+			0 0 1px rgba(255, 0, 204, 0.55),
+			0 0 3px rgba(56, 189, 248, 0.35);
+	}
+
+	50% {
+		text-shadow:
+			0 0 2px rgba(255, 0, 204, 0.75),
+			0 0 5px rgba(56, 189, 248, 0.55);
+	}
+}
+
+/*
 .author-badge {
 	display: inline-flex;
 	gap: 6px;
@@ -204,67 +264,4 @@ button:disabled {
 	border: 1px solid transparent;
 	border-radius: 999px;
 }
-
-.signature {
-	position: relative;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	padding: 2px 7px;
-	overflow: hidden;
-
-	font-size: 11px;
-	font-weight: 700;
-	line-height: 1.2;
-	color: #dbeafe;
-	text-decoration: none;
-
-	border-radius: 999px;
-	isolation: isolate;
-}
-
-.signature::before {
-	position: absolute;
-	inset: 0;
-	z-index: -2;
-	content: "";
-	background: conic-gradient(
-		from 0deg,
-		#ff00cc,
-		#38bdf8,
-		#22c55e,
-		#facc15,
-		#ff00cc
-	);
-	animation: signature-border-spin 3s linear infinite;
-}
-
-.signature::after {
-	position: absolute;
-	inset: 1px;
-	z-index: -1;
-	content: "";
-	background: #101828;
-	border-radius: inherit;
-}
-
-.signature:hover {
-	color: #ffffff;
-}
-
-.signature:hover::before {
-	filter:
-		drop-shadow(0 0 4px rgba(56, 189, 248, 0.7))
-		drop-shadow(0 0 8px rgba(232, 121, 249, 0.45));
-}
-
-.signature span {
-	position: relative;
-	z-index: 1;
-}
-
-@keyframes signature-border-spin {
-	to {
-		transform: rotate(360deg);
-	}
-}
+*/
