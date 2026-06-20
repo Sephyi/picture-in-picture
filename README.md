@@ -2,8 +2,6 @@
   <img src="./.github/banner.png" alt="Sephyi's Picture in Picture">
 </p>
 
----
-
 Most Picture-in-Picture extensions are either closed-source, bloated, or surprisingly complicated for something the browser already knows how to do.
 
 At its core, Picture-in-Picture is basically:
