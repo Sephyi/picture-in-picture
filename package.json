@@ -1,9 +1,9 @@
 {
 	"description": "Browser extension that toggles Picture in Picture for videos from the page context menu or popup.",
 	"devDependencies": {
-		"@biomejs/biome": "^2.5.0",
-		"typescript": "^5.9.3",
-		"wxt": "^0.20.26"
+		"@biomejs/biome": "^2.5.2",
+		"typescript": "^6.0.3",
+		"wxt": "^0.20.27"
 	},
 	"name": "pip-extension",
 	"private": true,
@@ -17,5 +17,5 @@
 		"zip": "wxt zip"
 	},
 	"type": "module",
-	"version": "0.1.0-rc.1"
+	"version": "0.1.0-rc.2"
 }
